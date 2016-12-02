@@ -11,5 +11,5 @@ package PrologCompiler;
  */
 public enum TokenType {
     Variable, Constant, Predicate, Negation, OpenParent, CloseParent,
-    Comma, Point, Integer, Float, String, Operator, EOF
+    Comma, Point, Integer, Float, String, Operator, EOL, EOT
 }

@@ -29,6 +29,7 @@ public class PrologCompiler {
         SourceCode.LinesOfCode.add(line);
         
         if (LexicalAnalyser.analyse())  {
+            SyntaxicalAnalyser.analyse();
             SourceCode.printTokens();
         }
     }

@@ -36,18 +36,7 @@ public class LexicalAnalyser {
             while (temp.length() > 0) {
                 String expression;
                 
-                if (temp.length() == 0) {
-                    //TODO: add endOfLine Token
-                    if (!isLastEqualPoint)
-                    {   
-                        unexpectedExpression(temp, SourceCode.LinesOfCode.indexOf(line));
-                        return false;
-                    }
-                    
-                    SourceCode.tokens.add(new Token("", TokenType.EOF));
-                    System.out.println("End Of Line");
-                }
-                else if (getWhiteSpace(temp) != null) {
+                if (getWhiteSpace(temp) != null) {
                   
                     expression = getWhiteSpace(temp);
                     
@@ -146,7 +135,22 @@ public class LexicalAnalyser {
                     return false;
                 }
             }
+            
+            if (temp.length() == 0) {
+                //TODO: add endOfLine Token
+                if (!isLastEqualPoint)
+                {   
+                    unexpectedExpression(temp, SourceCode.LinesOfCode.indexOf(line));
+                    return false;
+                }
+
+                SourceCode.tokens.add(new Token("End Of Line", TokenType.EOL));
+            }
+            
+            
         }
+        
+        SourceCode.tokens.add(new Token("End Of Code", TokenType.EOT));
         
         return true;
     }
