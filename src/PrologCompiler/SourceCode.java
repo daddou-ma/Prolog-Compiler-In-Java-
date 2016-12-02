@@ -19,11 +19,16 @@ public class SourceCode {
     public static ArrayList<Token> tokens = new ArrayList();
     
     public static void printTokens() {
-        System.out.println(TAG + " : \t Print Tokens");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("---------- |  First Step : Lexical Analyse  | ----------");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("------ | " + TAG + " :  Print Tokens" + "| ------");
         
         for(Token token : tokens) {
             System.out.println(token.type + " : \t" + token.expression);
         }
+        System.out.println("------ | " + TAG + " :  End   Tokens" + "| ------");
+        System.out.println("-------------------------------------------------------");
         System.out.println();
     }
 }

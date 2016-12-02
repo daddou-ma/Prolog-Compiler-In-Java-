@@ -9,7 +9,6 @@ package PrologCompiler;
  *
  * @author programmer
  */
-public enum TokenType {
-    Variable, Constant, Predicate, Negation, OpenParent, CloseParent,
-    Comma, Point, Integer, Float, String, Operator, EOF
+public class SyntaxicalAnalyse {
+    
 }

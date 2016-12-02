@@ -17,7 +17,7 @@ public class Error {
     * In case of empty array of SourceCode.linesOfCode or null value 
     */
     public static void log(String tag, String error, Object obj) {
-        System.out.println(tag + " : \t" + error);
-        System.out.println("\t" + obj.toString() + "\n");
+        System.out.println(tag + " : " + error);
+        System.out.println(obj.toString() + "\n");
     }
 }

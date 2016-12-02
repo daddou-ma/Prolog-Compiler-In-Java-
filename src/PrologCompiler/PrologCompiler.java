@@ -22,11 +22,15 @@ public class PrologCompiler {
     public static final String PREDICATE = "^[a-zA-Z]+";
     
     public static void main(String[] args) {
+        
         // Our line of code
-        String line = "5eat(ali, pomme).";
+        String line = "eat(ali, 18.00).";
         
+        SourceCode.LinesOfCode.add(line);
         
-        LexicalAnalyser.analyse();
+        if (LexicalAnalyser.analyse())  {
+            SourceCode.printTokens();
+        }
     }
     
 }
